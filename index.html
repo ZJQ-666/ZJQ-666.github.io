@@ -1,317 +1,147 @@
-/* styles.css */
-body {
-    font-family: '微软雅黑', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f8f8f8;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张三 - 个人简历</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">张三</div>
+            <ul class="nav-links">
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#experience">专业经历</a></li>
+                <li><a href="#skills">技能</a></li>
+                <li><a href="#projects">项目展示</a></li>
+                <li><a href="#education">教育背景</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+    <!-- 首屏展示 -->
+    <header class="hero">
+        <div class="container">
+            <h1>张三</h1>
+            <p>全栈开发者</p>
+            <p>3年Web开发经验，精通React与Node.js，主导过日均10万PV的电商平台开发</p>
+        </div>
+    </header>
 
-/* 导航栏 */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #a23838;
-    color: #fff;
-    z-index: 1000;
-}
+    <!-- 关于我 -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2>关于我</h2>
+            <p>全栈开发者，3年Web开发经验，精通React与Node.js，主导过日均10万PV的电商平台开发，擅长复杂业务场景的技术方案设计。具备良好的团队协作能力和技术领导力。</p>
+        </div>
+    </section>
 
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-}
+    <!-- 专业经历 -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2>专业经历</h2>
+            <div class="experience-item">
+                <h3>字节跳动 - 高级前端工程师</h3>
+                <p>2021.07 - 至今</p>
+                <ul>
+                    <li>负责抖音商家后台系统重构，采用SSR方案提升页面加载速度40%</li>
+                    <li>主导React组件库建设，制定开发规范，减少重复代码量70%</li>
+                    <li>搭建前端性能监控体系，推动关键指标异常下降35%</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-.navbar .logo {
-    font-size: 24px;
-    font-family: '楷体', serif;
-}
+    <!-- 技能 -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2>技能</h2>
+            <div class="skill-category">
+                <h3>技术栈</h3>
+                <ul>
+                    <li>前端：React/TypeScript/Webpack/Next.js</li>
+                    <li>后端：Node.js/Express/NestJS</li>
+                    <li>数据库：MySQL/MongoDB/Redis</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>开发工具</h3>
+                <ul>
+                    <li>Git</li>
+                    <li>Docker</li>
+                    <li>Jenkins</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>语言能力</h3>
+                <ul>
+                    <li>英语（CET-6，流利技术文档阅读）</li>
+                    <li>日语（N2，商务会话）</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-.navbar .nav-links {
-    list-style: none;
-    display: flex;
-}
+    <!-- 项目展示 -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2>项目展示</h2>
+            <div class="project-item">
+                <h3>电商中台系统 - 技术负责人</h3>
+                <p>2023.01 - 2023.12</p>
+                <ul>
+                    <li>采用微前端架构（qiankun）整合5个子系统，实现模块化开发</li>
+                    <li>设计RBAC权限系统，支持500+商家的分级权限管理</li>
+                    <li>引入WebSocket实现实时库存同步，降低超卖率25%</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h3>内部效能平台 - 核心开发者</h3>
+                <p>2022.03 - 2022.12</p>
+                <ul>
+                    <li>开发低代码表单引擎，提升运营配置效率60%</li>
+                    <li>实现自动化测试工具链，节省团队30%测试时间</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-.navbar .nav-links li {
-    margin: 0 15px;
-}
+    <!-- 教育背景 -->
+    <section id="education" class="section education">
+        <div class="container">
+            <h2>教育背景</h2>
+            <div class="education-item">
+                <h3>清华大学 - 计算机科学与技术</h3>
+                <p>硕士，2018.09 - 2021.06</p>
+                <ul>
+                    <li>相关课程：数据结构、分布式系统、机器学习</li>
+                    <li>GPA: 3.8/4.0（专业前10%）</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-.navbar .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-}
+    <!-- 联系方式 -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2>联系方式</h2>
+            <p>电话：+86 123-4567-8901</p>
+            <p>邮箱：zhangsan@email.com</p>
+            <p>地址：北京市海淀区</p>
+            <p>GitHub：<a href="https://github.com/zhangsan" target="_blank">https://github.com/zhangsan</a></p>
+        </div>
+    </section>
 
-.navbar .nav-links a:hover {
-    text-decoration: underline;
-}
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 张三</p>
+        </div>
+    </footer>
 
-/* 首屏展示 */
-.hero {
-    background-color: #bc7359;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
-}
-
-.hero h1 {
-    font-size: 48px;
-    font-family: '楷体', serif;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 20px;
-    margin: 10px 0;
-}
-
-/* 关于我 */
-.about {
-    padding: 50px 0;
-    background-color: #fff;
-}
-
-.about h2 {
-    font-size: 32px;
-    font-family: '楷体', serif;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.about p {
-    text-align: center;
-    font-size: 18px;
-}
-
-/* 专业经历 */
-.experience {
-    padding: 50px 0;
-    background-color: #f8f8f8;
-}
-
-.experience h2 {
-    font-size: 32px;
-    font-family: '楷体', serif;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.experience-item {
-    margin-bottom: 30px;
-}
-
-.experience-item h3 {
-    font-size: 24px;
-    font-family: '楷体', serif;
-    margin-bottom: 10px;
-}
-
-.experience-item p {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.experience-item ul {
-    list-style: none;
-    padding: 0;
-}
-
-.experience-item ul li {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-/* 技能 */
-.skills {
-    padding: 50px 0;
-    background-color: #fff;
-}
-
-.skills h2 {
-    font-size: 32px;
-    font-family: '楷体', serif;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.skill-category {
-    margin-bottom: 30px;
-}
-
-.skill-category h3 {
-    font-size: 24px;
-    font-family: '楷体', serif;
-    margin-bottom: 10px;
-}
-
-.skill-category ul {
-    list-style: none;
-    padding: 0;
-}
-
-.skill-category ul li {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-/* 项目展示 */
-.projects {
-    padding: 50px 0;
-    background-color: #f8f8f8;
-}
-
-.projects h2 {
-    font-size: 32px;
-    font-family: '楷体', serif;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.project-item {
-    margin-bottom: 30px;
-}
-
-.project-item h3 {
-    font-size: 24px;
-    font-family: '楷体', serif;
-    margin-bottom: 10px;
-}
-
-.project-item p {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.project-item ul {
-    list-style: none;
-    padding: 0;
-}
-
-.project-item ul li {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-/* 教育背景 */
-.education {
-    padding: 50px 0;
-    background-color: #fff;
-}
-
-.education h2 {
-    font-size: 32px;
-    font-family: '楷体', serif;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.education-item {
-    margin-bottom: 30px;
-}
-
-.education-item h3 {
-    font-size: 24px;
-    font-family: '楷体', serif;
-    margin-bottom: 10px;
-}
-
-.education-item p {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.education-item ul {
-    list-style: none;
-    padding: 0;
-}
-
-.education-item ul li {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-/* 联系方式 */
-.contact {
-    padding: 50px 0;
-    background-color: #f8f8f8;
-}
-
-.contact h2 {
-    font-size: 32px;
-    font-family: '楷体', serif;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.contact p {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.contact a {
-    color: #a23838;
-    text-decoration: none;
-}
-
-.contact a:hover {
-    text-decoration: underline;
-}
-
-/* 页脚 */
-.footer {
-    background-color: #a23838;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.footer p {
-    margin: 0;
-    font-size: 16px;
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    .navbar .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navbar .nav-links {
-        margin-top: 10px;
-        flex-direction: column;
-    }
-
-    .navbar .nav-links li {
-        margin: 5px 0;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .about h2, .experience h2, .skills h2, .projects h2, .education h2, .contact h2 {
-        font-size: 28px;
-    }
-
-    .experience-item h3, .skill-category h3, .project-item h3, .education-item h3 {
-        font-size: 20px;
-    }
-
-    .experience-item p, .experience-item li, .skill-category li, .project-item p, .project-item li, .education-item p, .education-item li, .contact p {
-        font-size: 14px;
-    }
-}
+    <script src="scripts.js"></script>
+</body>
+</html>
